@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">A CLASSIC TWO-PLAYER GAME</p>
+      <h1>Tic Tac Toe<span>.</span></h1>
+      <p class="subtitle">Three in a row. That's all it takes.</p>
+    </header>
+
+    <section class="setup panel" aria-labelledby="setup-title">
+      <div class="section-heading">
+        <h2 id="setup-title">Players</h2>
+        <span class="section-note">Choose your names</span>
+      </div>
+      <form id="player-form">
+        <div class="player-inputs">
+          <label>
+            <span class="player-label"><span class="symbol x-symbol">X</span> Player 1</span>
+            <input id="player-one" name="playerOne" type="text" maxlength="18" value="Player 1" required>
+          </label>
+          <label>
+            <span class="player-label"><span class="symbol o-symbol">O</span> Player 2</span>
+            <input id="player-two" name="playerTwo" type="text" maxlength="18" value="Player 2" required>
+          </label>
+        </div>
+        <button class="button button-primary" type="submit" id="start-button">Start game</button>
+      </form>
+    </section>
+
+    <section class="game panel" aria-label="Game">
+      <div class="game-status">
+        <div>
+          <p class="status-label" id="status-label">READY TO PLAY</p>
+          <h2 id="status-message" aria-live="polite">Enter your names and start</h2>
+        </div>
+        <button class="button button-secondary" id="restart-button" type="button">Restart</button>
+      </div>
+
+      <div class="scoreboard" aria-label="Players">
+        <div class="score-card active" id="player-one-card">
+          <span class="score-symbol x-symbol">X</span>
+          <span class="score-name" id="player-one-name">Player 1</span>
+          <span class="score-state" id="player-one-state">PLAYER 1</span>
+        </div>
+        <div class="score-card" id="player-two-card">
+          <span class="score-symbol o-symbol">O</span>
+          <span class="score-name" id="player-two-name">Player 2</span>
+          <span class="score-state" id="player-two-state">PLAYER 2</span>
+        </div>
+      </div>
+
+      <div class="board" id="board" role="grid" aria-label="Tic Tac Toe board">
+        <button class="cell" type="button" data-index="0" role="gridcell" aria-label="Square 1"></button>
+        <button class="cell" type="button" data-index="1" role="gridcell" aria-label="Square 2"></button>
+        <button class="cell" type="button" data-index="2" role="gridcell" aria-label="Square 3"></button>
+        <button class="cell" type="button" data-index="3" role="gridcell" aria-label="Square 4"></button>
+        <button class="cell" type="button" data-index="4" role="gridcell" aria-label="Square 5"></button>
+        <button class="cell" type="button" data-index="5" role="gridcell" aria-label="Square 6"></button>
+        <button class="cell" type="button" data-index="6" role="gridcell" aria-label="Square 7"></button>
+        <button class="cell" type="button" data-index="7" role="gridcell" aria-label="Square 8"></button>
+        <button class="cell" type="button" data-index="8" role="gridcell" aria-label="Square 9"></button>
+      </div>
+      <p class="helper-text">Take turns selecting an empty square.</p>
+    </section>
+
+    <footer>Built with HTML, CSS, and JavaScript.</footer>
+  </main>
+</body>
+</html>
